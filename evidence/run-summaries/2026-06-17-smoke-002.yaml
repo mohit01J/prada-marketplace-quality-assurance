@@ -47,5 +47,6 @@ rubric_scores:
 
 human_approval:
   required: true
-  decision: pending
+  decision: pass
   approver: qa_lead
+  approved_at: 2026-06-17
