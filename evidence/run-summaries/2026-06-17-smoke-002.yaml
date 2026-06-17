@@ -1,0 +1,51 @@
+run_id: 2026-06-17-smoke-002
+date: 2026-06-17
+time: 12:47:48
+suite: smoke
+trigger_intent: "we are going live tomorrow, run the usual checks"
+mapped_command: npm run test:bs:smoke
+source_repo: mohit01J/smart-automation
+evidence_repo: mohit01J/prada-marketplace-quality-assurance
+
+browserstack:
+  session_url: https://automation.browserstack.com/builds/07scqm57ajz2bmt4omjpsa2kakkdvhbjskmshxxm
+  build_id: 07scqm57ajz2bmt4omjpsa2kakkdvhbjskmshxxm
+  platform: Chrome / Windows 11
+  duration_seconds: 11.5
+
+results:
+  total: 9
+  passed: 9
+  failed: 0
+  status: PASS
+
+tests:
+  - name: "Alerts - JS alert can be accepted"
+    status: passed
+  - name: "Dynamic Loading - element hidden initially reveals after start"
+    status: passed
+  - name: "Inputs - number input accepts numeric value"
+    status: passed
+  - name: "Login - valid login succeeds"
+    status: passed
+  - name: "Login - invalid password shows error"
+    status: passed
+  - name: "Checkboxes - checkbox 1 can be checked"
+    status: passed
+  - name: "Checkboxes - checkbox 2 starts checked"
+    status: passed
+  - name: "Dropdown - can select option 1"
+    status: passed
+  - name: "Dropdown - can select option 2"
+    status: passed
+
+rubric_scores:
+  journey_correctness: 5
+  evidence_completeness: 4
+  regression_confidence: 5
+  triage_usefulness: 5
+
+human_approval:
+  required: true
+  decision: pending
+  approver: qa_lead
