@@ -1,0 +1,41 @@
+run_id: 2026-06-17-login-003
+date: 2026-06-17
+time: 12:51:30
+suite: login
+trigger_intent: "can you check if login is still working"
+mapped_command: node ./run-browserstack.js test tests/login.spec.ts
+source_repo: mohit01J/smart-automation
+evidence_repo: mohit01J/prada-marketplace-quality-assurance
+
+browserstack:
+  session_url: https://automation.browserstack.com/builds/tbxwl1wyipm3izvvbkyyzimbrnoxfjdfx0ujq9ms
+  build_id: tbxwl1wyipm3izvvbkyyzimbrnoxfjdfx0ujq9ms
+  platform: Chrome / Windows 11
+  duration_seconds: 6.7
+
+results:
+  total: 4
+  passed: 4
+  failed: 0
+  status: PASS
+
+tests:
+  - name: "Login - valid login succeeds"
+    status: passed
+  - name: "Login - invalid password shows an error"
+    status: passed
+  - name: "Login - invalid username shows an error"
+    status: passed
+  - name: "Login - login then logout returns to login page"
+    status: passed
+
+rubric_scores:
+  journey_correctness: 5
+  evidence_completeness: 4
+  regression_confidence: 5
+  triage_usefulness: 5
+
+human_approval:
+  required: true
+  decision: pending
+  approver: qa_lead
