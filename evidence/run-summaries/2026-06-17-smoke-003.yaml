@@ -1,0 +1,52 @@
+run_id: 2026-06-17-smoke-003
+task_id: 4df99d13-2e58-4ca4-b3e5-13fe3619327e
+task_name: "Pre Go-Live Smoke Check — 2026-06-17"
+date: "2026-06-17"
+suite: smoke
+intent: run_smoke_tests
+trigger: "we are going live tomorrow, run the usual checks"
+environment: browserstack
+browserstack_build_id: lh75u2li19qpgaogxlykhdmh3hcmay9nki6f3yhn
+browserstack_build_url: "https://automation.browserstack.com/builds/lh75u2li19qpgaogxlykhdmh3hcmay9nki6f3yhn"
+observability_url: "https://observability.browserstack.com/projects/SMART-QA+POC/builds/SMART-QA+Smoke+Run/15"
+project: SMART-QA POC
+build_name: SMART-QA Smoke Run
+duration_seconds: 17.3
+browser: Chrome (latest)
+os: Windows 11
+
+results:
+  total: 9
+  passed: 9
+  failed: 0
+  skipped: 0
+
+tests:
+  - name: "JS alert can be accepted"
+    status: passed
+  - name: "Dynamic loading — element hidden initially reveals after start"
+    status: passed
+  - name: "Number input accepts numeric value"
+    status: passed
+  - name: "Valid login succeeds"
+    status: passed
+  - name: "Invalid password shows error"
+    status: passed
+  - name: "Checkbox 1 can be checked"
+    status: passed
+  - name: "Checkbox 2 starts checked"
+    status: passed
+  - name: "Dropdown can select option 1"
+    status: passed
+  - name: "Dropdown can select option 2"
+    status: passed
+
+rubric:
+  journey_correctness: 5
+  evidence_completeness: 4
+  regression_confidence: 5
+  triage_usefulness: 5
+
+human_approval: pending
+agent: SMART-QA Agent
+session_id: b425942e-c1c7-4727-aaac-0c7c57e974ca
