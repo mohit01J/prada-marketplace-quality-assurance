@@ -41,4 +41,5 @@ rubric:
   evidence_completeness: 4
   regression_confidence: 5
 
-human_approval: pending
+human_approval: fail
+rejection_note: "Run rejected by human reviewer on 2026-06-17. Results flagged for review."
