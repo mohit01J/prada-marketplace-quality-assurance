@@ -1,0 +1,17 @@
+name: browserstack_execution
+version: 1.0.0
+description: Execute tests on BrowserStack using mohit01J/smart-automation
+inputs:
+  test_command: string
+  browserstack_capability: object
+  source_repo: mohit01J/smart-automation
+outputs:
+  session_url: string
+  screenshots: array
+  video: string
+  execution_logs: string
+  pass_fail_status: pass|fail
+quality_dimensions:
+  execution_stability: 1-5
+  evidence_completeness: 1-5
+  repeatability: 1-5

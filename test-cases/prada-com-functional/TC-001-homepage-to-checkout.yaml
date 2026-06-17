@@ -1,0 +1,31 @@
+id: TC-001
+name: Homepage to Checkout Golden Path
+type: functional
+priority: critical
+target_site: https://www.prada.com
+country: IT
+browser: Chrome Desktop
+steps:
+  - step: 1
+    action: Navigate to prada.com homepage
+    expected: Homepage loads successfully
+  - step: 2
+    action: Navigate to product listing
+    expected: Product listing page displays
+  - step: 3
+    action: Click on a product
+    expected: Product detail page loads
+  - step: 4
+    action: Add product to bag
+    expected: Product added to shopping bag
+  - step: 5
+    action: Proceed to checkout
+    expected: Checkout page loads
+  - step: 6
+    action: Select Italy and credit card payment
+    expected: Payment options displayed
+expected_result: Complete checkout flow accessible without errors
+mapped_workflow: prada_com_homepage_to_checkout
+mapped_skill: prada_com_checkout_path_validation
+mapped_test_repo: mohit01J/smart-automation
+status: ready_for_automation

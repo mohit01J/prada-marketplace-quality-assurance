@@ -1,0 +1,16 @@
+name: evidence_collection
+version: 1.0.0
+description: Collect and organize BrowserStack execution evidence
+inputs:
+  session_id: string
+  test_name: string
+  execution_timestamp: string
+outputs:
+  screenshot_urls: array
+  video_url: string
+  log_file: string
+  summary_report: string
+quality_dimensions:
+  completeness: 1-5
+  accessibility: 1-5
+  traceability: 1-5

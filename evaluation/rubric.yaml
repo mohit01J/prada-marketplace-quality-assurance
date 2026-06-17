@@ -1,0 +1,40 @@
+name: prada_com_qa_evaluation_rubric
+version: 1.0.0
+description: Standard evaluation rubric for all Prada.com QA workflow runs
+dimensions:
+  journey_correctness:
+    scale: 1-5
+    scores:
+      5: All steps executed correctly with no deviations
+      4: Minor deviations with no impact on outcome
+      3: Some steps deviated but checkout reached
+      2: Significant deviations checkout not reached cleanly
+      1: Workflow failed to complete
+  evidence_completeness:
+    scale: 1-5
+    scores:
+      5: Screenshots video logs all captured and accessible
+      4: Most evidence captured minor gaps
+      3: Partial evidence only
+      2: Minimal evidence captured
+      1: No evidence captured
+  regression_confidence:
+    scale: 1-5
+    scores:
+      5: Fully stable reproducible no flakiness
+      4: Stable with minor environmental variance
+      3: Mostly stable but some flakiness observed
+      2: Unreliable significant flakiness
+      1: Cannot be used as regression signal
+  triage_usefulness:
+    scale: 1-5
+    scores:
+      5: Failure clearly identified with reproduction steps
+      4: Failure identified with reproduction steps
+      3: Failure identified but reproduction unclear
+      2: Partial failure information only
+      1: No useful triage output
+  human_approval:
+    type: boolean
+    values: pass|fail
+    description: Final human review decision

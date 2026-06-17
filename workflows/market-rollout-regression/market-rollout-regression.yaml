@@ -1,0 +1,10 @@
+name: market_rollout_regression
+version: 1.0.0
+description: Validate country launch readiness using repeatable journeys
+status: planned
+planned_markets:
+  - country: US
+    planned_date: Q4-2026
+  - country: CA
+    planned_date: Q4-2026
+base_workflow: prada_com_homepage_to_checkout

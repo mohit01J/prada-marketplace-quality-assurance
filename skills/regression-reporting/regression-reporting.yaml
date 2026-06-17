@@ -1,0 +1,17 @@
+name: regression_reporting
+version: 1.0.0
+description: Generate regression run summary with pass/fail and evidence links
+inputs:
+  test_results: array
+  evidence_paths: array
+  run_metadata: object
+outputs:
+  summary_report: string
+  pass_count: integer
+  fail_count: integer
+  confidence_score: integer
+  human_approval_required: boolean
+quality_dimensions:
+  clarity: 1-5
+  completeness: 1-5
+  actionability: 1-5

@@ -1,0 +1,18 @@
+name: prada_com_checkout_path_validation
+version: 1.0.0
+description: Validate the Prada.com customer journey from homepage to checkout
+inputs:
+  country: string
+  device_browser: string
+  payment_method: string
+  functional_test_case: string
+outputs:
+  execution_result: pass|fail
+  captured_evidence: object
+  failure_summary: string
+  human_review_decision: pass|fail
+quality_dimensions:
+  journey_correctness: 1-5
+  evidence_quality: 1-5
+  reproducibility: 1-5
+  triage_usefulness: 1-5

@@ -1,0 +1,18 @@
+name: failure_triage
+version: 1.0.0
+description: Summarize test failure and prepare human-readable triage note
+inputs:
+  execution_logs: string
+  screenshots: array
+  video_url: string
+  functional_expected_result: string
+outputs:
+  likely_failure_area: string
+  reproduction_summary: string
+  evidence_links: array
+  suggested_next_action: string
+quality_dimensions:
+  clarity: 1-5
+  usefulness: 1-5
+  traceability: 1-5
+  human_review_effort: 1-5

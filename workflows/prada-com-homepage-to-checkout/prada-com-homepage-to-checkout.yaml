@@ -1,0 +1,42 @@
+name: prada_com_homepage_to_checkout
+version: 1.0.0
+description: Golden path QA workflow - Prada.com homepage to checkout
+metadata:
+  country: IT
+  payment_method: credit_card
+  browser: Chrome
+  device: Desktop
+  environment: staging
+  test_repo: mohit01J/smart-automation
+  command_matrix: docs/AGENT_COMMAND_MATRIX.json
+steps:
+  - id: step_01
+    name: Read command matrix
+    action: read_file
+    repo: mohit01J/smart-automation
+    file: docs/AGENT_COMMAND_MATRIX.json
+  - id: step_02
+    name: Match intent to command
+    action: match_intent
+    intent: run all tests on browserstack
+  - id: step_03
+    name: Execute via BrowserStack MCP
+    action: trigger_browserstack
+    skill: browserstack-execution
+  - id: step_04
+    name: Capture evidence
+    skill: evidence-collection
+  - id: step_05
+    name: Generate run summary
+    skill: regression-reporting
+    output_repo: mohit01J/prada-marketplace-quality-assurance
+    output_path: evidence/run-summaries/
+  - id: step_06
+    name: Human review and approval
+    action: human_approval
+    approver: qa_lead
+success_criteria:
+  journey_correctness: 5
+  evidence_completeness: 4
+  regression_confidence: 4
+  human_approval: pass
