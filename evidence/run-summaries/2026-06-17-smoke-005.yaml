@@ -1,0 +1,43 @@
+run_id: 1zvtxj8yvqzvjkhvznsrocbz2z9ipx0dd6a3d95s
+date: "2026-06-17"
+suite: smoke
+task_id: 4df99d13-2e58-4ca4-b3e5-13fe3619327e
+task_name: "Pre Go-Live Smoke Check — 2026-06-17"
+intent: run_smoke_tests
+trigger: "we are going live tomorrow, run the usual checks"
+command: "npm run test:bs:smoke"
+runner: browserstack
+duration_seconds: 17.4
+tests_total: 9
+tests_passed: 9
+tests_failed: 0
+
+results:
+  - name: "JS Alert — accepted correctly"
+    status: passed
+  - name: "Dynamic Loading — hidden element revealed after start"
+    status: passed
+  - name: "Number Input — accepts numeric value"
+    status: passed
+  - name: "Login — valid credentials succeed"
+    status: passed
+  - name: "Login — invalid password shows error"
+    status: passed
+  - name: "Checkbox 1 — can be checked"
+    status: passed
+  - name: "Checkbox 2 — starts checked"
+    status: passed
+  - name: "Dropdown — can select option 1"
+    status: passed
+  - name: "Dropdown — can select option 2"
+    status: passed
+
+browserstack_build_url: "https://automation.browserstack.com/builds/1zvtxj8yvqzvjkhvznsrocbz2z9ipx0dd6a3d95s"
+
+rubric_scores:
+  journey_correctness: 5
+  evidence_completeness: 4
+  regression_confidence: 5
+
+human_approval: fail
+human_approval_note: "Run flagged by reviewer at approval stage — 2026-06-17"
